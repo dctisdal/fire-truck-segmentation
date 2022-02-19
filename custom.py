@@ -148,8 +148,7 @@ class CustomDataset(utils.Dataset):
             # the outline of each object instance. There are stores in the
             # shape_attributes (see json format above)
             polygons = [r['shape_attributes'] for r in a['regions']]
-            class_names_each_region = [r['region_attributes']['type'] if 'type' in r['region_attributes'] 
-                                          else r['region_attributes']['category_id'] for r in a['regions']]
+            class_names_each_region = [r['region_attributes']['type'] for r in a['regions']]
 
             # load_mask() needs the image size to convert polygons to masks.
             # Unfortunately, VIA doesn't include it in JSON, so we must read
