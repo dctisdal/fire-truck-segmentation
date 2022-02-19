@@ -65,7 +65,7 @@ DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
 # CLASS NAME - USER MUST UPDATE and it must match names in .json annotation files
 # CLASS_NAME = {'eye':1, 'nose':2}
 
-CLASS_NAME = {'fish':1}
+CLASS_NAME = {'fire_truck':1}
 
 ############################################################
 #  Configurations
