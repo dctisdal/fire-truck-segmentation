@@ -270,14 +270,14 @@ def get_ax(rows=1, cols=1, size=16):
 
 def detect_and_draw_image(model, image_path=None):
     """Run model detection and generate the result image"""
-    class_names = ['BG']
+    class_names = ['fire_truck']
     class_names.extend(CLASS_NAME.keys())
     if image_path:
         # Read image
         image = skimage.io.imread(args.image)
         # Detect objects
         r = model.detect([image], verbose=1)[0]
-        image_result = display_instances(image, r['rois'], r['masks'], r['class_ids'], 
+        image_result = display_instances(image, r['rois'], r['masks'], r['class_ids'],
                         class_names, r['scores'],
                         title="Predictions")
         cv2.namedWindow("result", cv2.WINDOW_NORMAL)
