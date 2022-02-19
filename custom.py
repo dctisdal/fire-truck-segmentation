@@ -192,7 +192,7 @@ class CustomDataset(utils.Dataset):
         class_ids = []
         for cls_name in info['source']:
             class_ids.append(CLASS_NAME[cls_name])
-        return mask.astype(np.bool), np.array(class_ids, dtype=np.int32)
+        return mask.astype(bool), np.array(class_ids, dtype=np.int32)
 
     def image_reference(self, image_id):
         """Return the path of the image."""
